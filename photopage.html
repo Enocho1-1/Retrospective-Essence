@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="photopage.css">
+
+  </head>
+
+  <body>
+    <div class="primaryContainer">
+        <h1 class="headerStyle">Retrospective Essence</h1>
+        <h2 class="headerStyle2">Minimalistic Photography</h2>
+   </div>
+
+   <div class="secondaryContainer">
+     <h1>the retropective collection</h1>
+     <div class="fullImage" id="fullImageBox">
+       <img src="img1/nature101.jpg" alt="photo" id="fullImg">
+       <span onclick="closeFullImg()">X</span>
+     </div>
+      <div class="gallery">
+        <img src="img1/nature101.jpg" alt="photo" onclick="openFullImg(this.src)">
+        <img src="img1/image5.0.jpg" alt="photo" onclick="openFullImg(this.src)">
+        <img src="img1/nature100.jpg" alt="photo" onclick="openFullImg(this.src)">
+        <img src="img1/everything.jpg" alt="photo" onclick="openFullImg(this.src)">
+        <img src="img1/photo1.jpg" alt="photo" onclick="openFullImg(this.src)">
+        <img src="img1/capture.jpg" alt="photo" onclick="openFullImg(this.src)">
+        <img src="img1/image3.jpg" alt="photo" onclick="openFullImg(this.src)">
+        <img src="img1/image4.jpg" alt="photo" onclick="openFullImg(this.src)">
+        <img src="img1/image2.jpg" alt="photo" onclick="openFullImg(this.src)">
+        <img src="img1/image5.jpg" alt="photo" onclick="openFullImg(this.src)">
+        <img src="img1/image4.0.jpg" alt="photo"onclick="openFullImg(this.src)">
+        <img src="img1/city3.0.jpg" alt="photo" onclick="openFullImg(this.src)">
+      </div>
+   </div>
+
+   <script>
+      const secondary = document.querySelector('.secondaryContainer');
+      const collection = secondary.querySelector('h1');
+      const fullImageBox = document.getElementById('fullImageBox');
+      const fullImg = document.getElementById('fullImg');
+
+
+        collection.addEventListener('mouseover', ()=>{
+          collection.innerHTML = collection.innerHTML.toUpperCase();
+        });
+
+        collection.addEventListener('mouseout', ()=>{
+          collection.innerHTML =   collection.innerHTML.toLowerCase();
+        });
+       function openFullImg(pic){
+         fullImageBox.style.display = "flex";
+         fullImg.src= pic;
+       }
+
+       function closeFullImg() {
+         fullImageBox.style.display = "none";
+       }
+
+
+   </script>
+  </body>
+
+</html>
